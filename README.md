@@ -55,13 +55,9 @@ A correct `eval.js` prints exactly this table. If your numbers differ, your metr
 | **Summary** | **MRR 0.30 · Recall@10 0.60** | **MRR 0.67 · Recall@10 1.00** |
 ```
 
-## Write up your findings
+## Findings
 
-Add a short interpretation (4 to 6 sentences) to this README or a `RESULT.md`:
-- Which system is better overall, and on which metric(s)?
-- Which queries did keyword search win, and what do those queries have in common?
-- Which queries did semantic search win, and what do those have in common?
-- One sentence on why a team would still keep the weaker system around (hint: the two systems win on different queries).
+Semantic search is better overall, with higher MRR (0.67 vs 0.30) and Recall@10 (1.00 vs 0.60). Keyword search ranks the correct post higher for “redis or memcached for caching” and “sql or nosql for a new product,” both of which name exact products or categories. Semantic search wins on the other eight queries, which often describe a problem or goal in language different from the relevant post title. This suggests semantic matching helps bridge paraphrases and intent, while literal terms can favor keyword search on direct comparisons. A team could keep keyword search because it complements semantic search when users know the exact product names or phrasing.
 
 ## Take it further (optional)
 
